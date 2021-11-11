@@ -60,7 +60,7 @@ public class ProgressIntentService extends IntentService {
     ArrayAdapter<String> adapter;
     ArrayList<String> datos;
     private ProgressDialog pDialog;
-    String  status="",myBase64Image="",num_guia = "", imei = "", url = "http://www.transportezavala.com/transporte/index.php/", hora = "", lat_extraida = "", lon_extraida = "";
+    String  status="",myBase64Image="",num_guia = "", imei = "", url = "https://www.innovationtechnologyperu.com/transporte/index.php/", hora = "", lat_extraida = "", lon_extraida = "";
     Context c;
     JSONArray json;
     String guias[];

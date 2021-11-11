@@ -180,6 +180,10 @@
         "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\7cec3516c1b15d8ed289211b51a740ba\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
+        "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_aceros_arequipa.jpg.flat",
+        "source": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\src\\main\\res\\drawable-xxxhdpi\\aceros_arequipa.jpg"
+    },
+    {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_ic_menu_gallery.xml.flat",
         "source": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
     },
@@ -456,6 +460,10 @@
         "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\dddfcd7e76058c8973f565557b23fdc1\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
+        "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_aceros_arequipa_2.png.flat",
+        "source": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\src\\main\\res\\drawable-xxxhdpi\\aceros_arequipa_2.png"
+    },
+    {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_fondo2.png.flat",
         "source": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\src\\main\\res\\mipmap-xhdpi\\ic_fondo2.png"
     },
@@ -582,6 +590,10 @@
     {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_waze_round.xml.flat",
         "source": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\src\\main\\res\\mipmap-anydpi-v26\\waze_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable_header3.jpg.flat",
+        "source": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\src\\main\\res\\drawable\\header3.jpg"
     },
     {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -849,7 +861,7 @@
     },
     {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_dmax_spots_spot.xml.flat",
-        "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\ea6c4f2052747a1df36e070ea4b1b328\\res\\drawable-v21\\dmax_spots_spot.xml"
+        "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\f5cd613ce0e8b595f74de32c26a0ec52\\res\\drawable-v21\\dmax_spots_spot.xml"
     },
     {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -858,10 +870,6 @@
     {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_bg_color_selector.xml.flat",
         "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\79b1d7083f78347c89e168caaf67e46f\\res\\color\\mtrl_btn_bg_color_selector.xml"
-    },
-    {
-        "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable_header3.png.flat",
-        "source": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\src\\main\\res\\drawable\\header3.png"
     },
     {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_laucher_za_round.png.flat",
@@ -2409,7 +2417,7 @@
     },
     {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\layout_dmax_spots_dialog.xml.flat",
-        "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\ea6c4f2052747a1df36e070ea4b1b328\\res\\layout\\dmax_spots_dialog.xml"
+        "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\f5cd613ce0e8b595f74de32c26a0ec52\\res\\layout\\dmax_spots_dialog.xml"
     },
     {
         "merged": "C:\\Users\\Vega\\Desktop\\transporte_zavala\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",

@@ -15,11 +15,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:paddingLeft="5dp"
-        android:text="Transporte Zavala S.A.C."
-        android:textColor="@color/colorLetrasMenu"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Aceros Arequipa S.A.C."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorLetrasMenu" />
 
     <TextView
         android:id="@+id/textView"
@@ -28,6 +28,6 @@
         android:paddingLeft="5dp"
         android:textColor="@color/colorLetrasMenu"
         android:textSize="6pt"
-        android:text="Todos los derechos reservados © 2020" />
+        android:text="Todos los derechos reservados © 2021" />
 
 </LinearLayout>

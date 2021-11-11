@@ -361,7 +361,7 @@ public class LocationService extends Service {
             datos = new ArrayList<String>();
             try {
 
-                url_new = new URL("http://www.transportezavala.com/trackinn/index.php/android/Registrar_Datos_SQlite");
+                url_new = new URL("https://www.innovationtechnologyperu.com/trackinn/index.php/android/Registrar_Datos_SQlite");
 
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block

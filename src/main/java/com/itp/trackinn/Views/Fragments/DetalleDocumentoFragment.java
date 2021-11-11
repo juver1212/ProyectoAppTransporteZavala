@@ -103,7 +103,7 @@ public class DetalleDocumentoFragment extends Fragment {
     private AlertDialog alertDialog;
     String status = "", num_guia = "", tipdoc = "", cliente = "", imei = "", fechaCompromiso="",ruccliente="", contacto="", telefonocontacto="",
             horaCompromiso="", flete="", direccionReferencia="",coordinador="",telefonoCoordinador="", direccion="",
-            url = "http://www.transportezavala.com/trackinn/index.php/", transportista = "", hora = "", lat_extraida = "", lon_extraida = "", hora_atencion = "", lat_ext_aten = "", lon_ext_aten = "";
+            url = "https://www.innovationtechnologyperu.com/trackinn/index.php/", transportista = "", hora = "", lat_extraida = "", lon_extraida = "", hora_atencion = "", lat_ext_aten = "", lon_ext_aten = "";
 
     int cantidad_fotos = 0;
     Context c;

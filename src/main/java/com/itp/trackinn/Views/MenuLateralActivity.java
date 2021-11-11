@@ -99,7 +99,7 @@ public class MenuLateralActivity extends AppCompatActivity implements Navigation
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        toolbar.setTitle("Transporte Zavala S.A.C.");
+        toolbar.setTitle("Aceros Arequipa S.A.C.");
         new DatosInicio().execute(imei);
     }
 
@@ -302,7 +302,7 @@ public class MenuLateralActivity extends AppCompatActivity implements Navigation
             try {
 
                 // Enter URL address where your php file resides
-                url_new = new URL("http://www.transportezavala.com/trackinn/index.php/hojaruta/extraer_datos_bienvenida");
+                url_new = new URL("https://www.innovationtechnologyperu.com/trackinn/index.php/hojaruta/extraer_datos_bienvenida");
 
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block
@@ -408,7 +408,7 @@ public class MenuLateralActivity extends AppCompatActivity implements Navigation
                 args.putString("placa", placa);
 
                 Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-                toolbar.setTitle("Transporte Zavala S.A.C.");
+                toolbar.setTitle("Aceros Arequipa S.A.C.");
                 FragmentManager manager1 = getSupportFragmentManager();
                 BienvenidaFragment nuevoFragmento1 = new BienvenidaFragment();
                 nuevoFragmento1.setArguments(args);

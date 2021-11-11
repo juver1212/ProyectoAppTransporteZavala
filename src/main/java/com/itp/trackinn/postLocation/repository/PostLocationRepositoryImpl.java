@@ -36,7 +36,7 @@ import retrofit2.Response;
 public class PostLocationRepositoryImpl implements PostLocationRepository {
     private boolean debugMode = true;
 
-    String url="http://www.transportezavala.com/trackinn/index.php/";
+    String url="https://www.innovationtechnologyperu.com/trackinn/index.php/";
     @Override
     public void post(double latitud, double longitud) {
         Log.i("PostLocationRepository","Llego la solicitud a repository");
@@ -139,7 +139,7 @@ public class PostLocationRepositoryImpl implements PostLocationRepository {
         @Override
         protected String doInBackground(String... params) {
             try {
-                url_new = new URL("http://www.transportezavala.com/trackinn/index.php/android/Registrar_Datos_SQlite");
+                url_new = new URL("https://www.innovationtechnologyperu.com/trackinn/index.php/android/Registrar_Datos_SQlite");
                 conn = (HttpURLConnection)url_new.openConnection();
                 conn.setReadTimeout(50000);
                 conn.setConnectTimeout(50000);

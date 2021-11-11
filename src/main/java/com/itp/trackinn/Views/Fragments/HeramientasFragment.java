@@ -51,7 +51,7 @@ import java.util.Random;
 public class HeramientasFragment extends Fragment {
 
     JSONArray json;
-    String url = "http://www.transportezavala.com/trackinn/index.php/",status = "";
+    String url = "https://www.innovationtechnologyperu.com/trackinn/index.php/",status = "";
     NotificationManager mNotifyManager;
     NotificationCompat.Builder builder;
     public int indicador = 0;

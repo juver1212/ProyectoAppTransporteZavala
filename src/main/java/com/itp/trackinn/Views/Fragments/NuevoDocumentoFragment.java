@@ -58,7 +58,7 @@ public class NuevoDocumentoFragment extends Fragment {
 
     Spinner cboDocumento, cboDireccion, cboFlete;
     Button btnguardar;
-    String url = "http://www.transportezavala.com/trackinn/index.php/android/";
+    String url = "https://www.innovationtechnologyperu.com/trackinn/index.php/android/";
     JSONArray json;
     String guias[];
     ArrayList<Clientes> clientes = new ArrayList<Clientes>();

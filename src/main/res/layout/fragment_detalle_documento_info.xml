@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:text="INFORMACION"
-            android:textColor="#B00004"
+            android:textColor="#215398"
             android:background="@drawable/borderinferior"
             android:layout_marginRight="10dp"
             app:srcCompat="@drawable/ic_back"/>

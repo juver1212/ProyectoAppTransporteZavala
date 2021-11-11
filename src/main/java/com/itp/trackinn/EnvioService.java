@@ -48,7 +48,7 @@ public class EnvioService extends Service {
     LocationManager mLocationManager;
     LocationListener mLocationListener;
     JSONArray json;
-    String url="http://www.transportezavala.com/trackinn/index.php/";
+    String url="https://www.innovationtechnologyperu.com/trackinn/index.php/";
     String imei="";
     Handler hand = new Handler();
     NotificationCompat.Builder builder;

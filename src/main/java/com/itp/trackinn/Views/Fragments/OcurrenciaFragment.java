@@ -60,7 +60,7 @@ public class OcurrenciaFragment extends Fragment {
     private TextView descripcion, titulo;
     private ImageButton mSpeakBtn;
     private Button btnguardar;
-    String url = "http://www.transportezavala.com/trackinn/index.php/", imei = "";
+    String url = "https://www.innovationtechnologyperu.com/trackinn/index.php/", imei = "";
     JSONArray json;
     ArrayList<String> datos;
     private AlertDialog alertDialog;

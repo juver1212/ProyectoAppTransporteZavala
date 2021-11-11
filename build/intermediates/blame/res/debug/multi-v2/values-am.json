@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\b2c6d63e4c0880a5374435df712498eb\\res\\values-am\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "190",
+                        "endOffsets": "437"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3821",
+                        "endColumns": "190",
+                        "endOffsets": "4007"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\7468a9b156f02474e8c8b129f693902b\\res\\values-am\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -52,23 +69,6 @@
                         "startOffsets": "5312",
                         "endColumns": "100",
                         "endOffsets": "5408"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Vega\\.gradle\\caches\\transforms-2\\files-2.1\\5a9d263ebc6dea9b3ea635ba1f8753b9\\res\\values-am\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "190",
-                        "endOffsets": "437"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3821",
-                        "endColumns": "190",
-                        "endOffsets": "4007"
                     }
                 }
             ]

@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="GESTION"
-            android:textColor="#B00004"
+            android:textColor="#215398"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/borderinferior"/>
@@ -173,7 +173,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginRight="12dp"
-                android:backgroundTint="@color/colorBotonSave"
+                android:backgroundTint="#215398"
                 android:drawablePadding="8dp"
                 android:text="Capturar Imagen"
                 android:textAllCaps="false"
@@ -191,7 +191,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginRight="12dp"
-                android:backgroundTint="@color/colorBotonSave"
+                android:backgroundTint="#215398"
                 android:drawablePadding="8dp"
                 android:text="Cargar Imagen Desde Galeria"
                 android:textAllCaps="false"
@@ -199,20 +199,20 @@
                 android:textSize="7pt" />
 
             <Button
+                android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:drawablePadding="8dp"
-                android:id="@+id/button"
-                android:textColor="@android:color/white"
-                android:text="Mercaderia Despachado"
-                android:backgroundTint="@color/colorBotonSave"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginRight="12dp"
-                android:textSize="7pt"
-                android:textAllCaps="false"/>
+                android:backgroundTint="#215398"
+                android:drawablePadding="8dp"
+                android:text="Mercaderia Despachado"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="7pt" />
 
         </LinearLayout>
 

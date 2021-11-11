@@ -232,7 +232,7 @@ public class ServiceGeolocation extends Service {
                 .setContentTitle("Sincronización de ubicación")
                 .setContentText(text)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(text))
-                .setSmallIcon(R.drawable.logo_innovation)
+                .setSmallIcon(R.drawable.aceros_arequipa_2)
                 .setContentIntent(pendingIntent)
                 .setOnlyAlertOnce(true)
                 .build();

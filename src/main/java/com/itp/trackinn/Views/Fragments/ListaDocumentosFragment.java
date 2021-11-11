@@ -61,7 +61,7 @@ public class ListaDocumentosFragment extends Fragment {
     private ListView lv1;
     ListaGuiaAdapterNew adapter;
     //String url = "http://www.innovationtechnologyperu.com/trackinn/index.php/hojaruta/";
-    String url = "http://www.transportezavala.com/trackinn/index.php/hojaruta/";
+    String url = "https://www.innovationtechnologyperu.com/trackinn/index.php/hojaruta/";
     //extraer_imei
     ArrayList<ListaGuiaCampos> datos=new ArrayList<ListaGuiaCampos>();
     private AlertDialog alertDialog;

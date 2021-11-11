@@ -25,7 +25,7 @@ public class BienvenidaFragment extends Fragment {
     String imei = "";
     Context c;
     JSONArray json;
-    String url = "http://www.transportezavala.com/trackinn/index.php/hojaruta/";
+    String url = "https://www.innovationtechnologyperu.com/trackinn/index.php/hojaruta/";
     public static final int CONNECTION_TIMEOUT=50000;
     public static final int READ_TIMEOUT=50000;
     private TextView titulo1, subtitulo1, titulo2, subtitulo2, titulo3, subtitulo3, txtconductor;
