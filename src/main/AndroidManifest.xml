@@ -31,13 +31,12 @@
     <application
         android:allowBackup="true"
         android:appComponentFactory="whateverString"
-        android:icon="@mipmap/ic_laucher_za_round"
-        android:label="Trackinn"
+        android:icon="@drawable/aceros_arequipa"
+        android:label="Aceros Arequipa"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:appComponentFactory">
-        <activity android:name="com.itp.trackinn.DetalleActivity"></activity>
 
         <service
             android:name="com.itp.trackinn.ServiceGeolocation.ServiceGeolocation"

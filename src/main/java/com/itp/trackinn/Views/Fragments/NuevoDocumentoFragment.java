@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -237,12 +238,9 @@ public class NuevoDocumentoFragment extends Fragment {
     }
 
     public static String getImei(Context c) {
-        TelephonyManager telephonyManager = (TelephonyManager) c
-                .getSystemService(Context.TELEPHONY_SERVICE);
-        if (ActivityCompat.checkSelfPermission(c, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-
-        }
-        return telephonyManager.getDeviceId();
+        String android_id = Settings.Secure.getString(c.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        return android_id;
     }
 
     private class ListarClientes extends AsyncTask<String, String, String>

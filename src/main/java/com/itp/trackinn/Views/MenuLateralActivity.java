@@ -424,8 +424,8 @@ public class MenuLateralActivity extends AppCompatActivity implements Navigation
     }
 
     public static String getImei(Context c) {
-        TelephonyManager telephonyManager = (TelephonyManager) c
-                .getSystemService(Context.TELEPHONY_SERVICE);
-        return telephonyManager.getDeviceId();
+        String android_id = Settings.Secure.getString(c.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        return android_id;
     }
 }

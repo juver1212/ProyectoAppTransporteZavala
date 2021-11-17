@@ -373,12 +373,9 @@ public class DetalleDocumentoFragment extends Fragment {
     }
 
     public static String getImei(Context c) {
-        TelephonyManager telephonyManager = (TelephonyManager) c
-                .getSystemService(Context.TELEPHONY_SERVICE);
-        if (ActivityCompat.checkSelfPermission(c, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-
-        }
-        return telephonyManager.getDeviceId();
+        String android_id = Settings.Secure.getString(c.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        return android_id;
     }
 
     public class MyLocationListener implements LocationListener {

@@ -1,17 +1,24 @@
 package com.itp.trackinn.Views.Fragments;
 
 
+import static android.content.Context.CLIPBOARD_SERVICE;
+
 import android.app.AlertDialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.trackiinn.apptrack.R;
 
@@ -28,9 +35,11 @@ public class BienvenidaFragment extends Fragment {
     String url = "https://www.innovationtechnologyperu.com/trackinn/index.php/hojaruta/";
     public static final int CONNECTION_TIMEOUT=50000;
     public static final int READ_TIMEOUT=50000;
-    private TextView titulo1, subtitulo1, titulo2, subtitulo2, titulo3, subtitulo3, txtconductor;
+    private TextView titulo1, subtitulo1, titulo2, subtitulo2, titulo3, subtitulo3, txtconductor, txtUuid;
     String documentos_pendientes = "", inicio_ruta ="", inicio_ruta_fecha ="", documentos_atendidos ="", conductor ="",
             cod_hoja="", num_hoja="", cod_empresa="";
+    private ClipboardManager myClipboard;
+    private ClipData myClip;
 
     public BienvenidaFragment() {
 
@@ -52,7 +61,19 @@ public class BienvenidaFragment extends Fragment {
         titulo3 = (TextView) v.findViewById(R.id.titulo3);
         subtitulo3 = (TextView) v.findViewById(R.id.subtitulo3);
         txtconductor = (TextView) v.findViewById(R.id.txtconductor);
+        txtUuid = (TextView) v.findViewById(R.id.uuid);
+        myClipboard = (ClipboardManager) getActivity().getSystemService(CLIPBOARD_SERVICE);
 
+        txtUuid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String text = txtUuid.getText().toString();
+                myClip = ClipData.newPlainText("text", text);
+                myClipboard.setPrimaryClip(myClip);
+                Toast.makeText(getActivity(), "UUID copiado", Toast.LENGTH_SHORT).show();
+            }
+
+        });
 
         Bundle bundle = this.getArguments();
         if (bundle != null) {
@@ -94,12 +115,14 @@ public class BienvenidaFragment extends Fragment {
 
         imei = getImei(getActivity());
 
+        txtUuid.setText(imei);
+
         return v;
     }
 
     public static String getImei(Context c) {
-        TelephonyManager telephonyManager = (TelephonyManager) c
-                .getSystemService(Context.TELEPHONY_SERVICE);
-        return telephonyManager.getDeviceId();
+        String android_id = Settings.Secure.getString(c.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        return android_id;
     }
 }

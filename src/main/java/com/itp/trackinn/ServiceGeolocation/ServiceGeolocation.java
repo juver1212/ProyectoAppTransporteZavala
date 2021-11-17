@@ -28,6 +28,7 @@ import android.os.Process;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.util.Printer;
@@ -126,7 +127,7 @@ public class ServiceGeolocation extends Service {
         modelotelef = GeneralUtil.getModel(this);
         version = GeneralUtil.getversionName(this);
         signal = GeneralUtil.getSignal(this);
-        imei = obtenerIMEI();
+        imei = obtenerIMEI2(getApplicationContext());
     }
 
     @Override
@@ -144,6 +145,12 @@ public class ServiceGeolocation extends Service {
         return START_REDELIVER_INTENT;
     }
 
+    public static String obtenerIMEI2(Context c) {
+        String android_id = Settings.Secure.getString(c.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        return android_id;
+    }
+
     private String obtenerIMEI() {
         final TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -151,8 +158,7 @@ public class ServiceGeolocation extends Service {
 
             }
             return telephonyManager.getImei();
-        }
-        else {
+        } else {
             return telephonyManager.getDeviceId();
         }
     }
@@ -165,10 +171,10 @@ public class ServiceGeolocation extends Service {
     }
 
     private void destroyAllThreads() {
-        if(timerTask != null){
+        if (timerTask != null) {
             timerTask.cancel();
         }
-        if(timer != null){
+        if (timer != null) {
             timer.cancel();
             timer.purge();
         }
@@ -216,7 +222,7 @@ public class ServiceGeolocation extends Service {
 
     }
 
-    private Notification getMyActivityNotification1(String text){
+    private Notification getMyActivityNotification1(String text) {
         Intent notificationIntent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,
                 0, notificationIntent, 0);
@@ -268,8 +274,7 @@ public class ServiceGeolocation extends Service {
         public void handleMessage(Message msg) {
             try {
                 sendLocationCoordinates(Thread.currentThread().getName(), msg.arg1);
-            }
-            catch (Exception e){
+            } catch (Exception e) {
                 //Crashlytics.log(1,"ServicioGeolocation", e.getMessage());
             }
         }
@@ -282,22 +287,22 @@ public class ServiceGeolocation extends Service {
                     connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                     networkInfo = connectivityManager.getActiveNetworkInfo();
 
-                    if(!isLocationPermissionGranted()){
-                        Log.i("------AVISOOOO-----","Permisos de localización denegados");
+                    if (!isLocationPermissionGranted()) {
+                        Log.i("------AVISOOOO-----", "Permisos de localización denegados");
                         updateNotification("Permisos de localización denegados");
                         return;
                     }
-                    if(mLastLocation == null){
-                        Log.i("------AVISOOOO-----","No hay informes de Localización");
-                        updateNotification("Última actualización...: "+ ToolsDate.getFormattedDateSimple(System.currentTimeMillis(),
+                    if (mLastLocation == null) {
+                        Log.i("------AVISOOOO-----", "No hay informes de Localización");
+                        updateNotification("Última actualización...: " + ToolsDate.getFormattedDateSimple(System.currentTimeMillis(),
                                 "dd/MM/yy HH:mm:ss", null)
-                                + "\n"+"No hay informes de Localización");
+                                + "\n" + "No hay informes de Localización");
                         return;
                     }
 
-                    updateNotification("Última actualización...: "+ ToolsDate.getFormattedDateSimple(System.currentTimeMillis(),
+                    updateNotification("Última actualización...: " + ToolsDate.getFormattedDateSimple(System.currentTimeMillis(),
                             "dd/MM/yy HH:mm:ss", null)
-                            + "\n"+"Lat: "
+                            + "\n" + "Lat: "
                             + mLastLocation.getLatitude()
                             + "    Lon: "
                             + mLastLocation.getLongitude()
@@ -310,20 +315,20 @@ public class ServiceGeolocation extends Service {
                         coordenadaLocation.setLongitud(mLastLocation.getLongitude());
                         coordenadaLocation.setFec_reg(GeneralUtil.FechaHoraActual());
                         coordenadaLocation.setNivel_bateria(String.valueOf(estadoBateria));
-                        coordenadaLocation.setVelocidad(String.valueOf(mLastLocation.getSpeed()* 3.6f));
+                        coordenadaLocation.setVelocidad(String.valueOf(mLastLocation.getSpeed() * 3.6f));
                         coordenadaLocation.setDatos_moviles("S");
                         coordenadaLocation.setEstado_gps("S");
                         guardarDataLocal(coordenadaLocation);
 
                         if (networkInfo != null && networkInfo.isConnected()) {
                             if (listaCoordenadas.size() >= 6) {
-                                Log.i("------AVISOOOO-----","Comenzo envio a Webservice");
+                                Log.i("------AVISOOOO-----", "Comenzo envio a Webservice");
                                 postLocationRepository.enviarDataLocation(extraerListaCoordenadas(), c);
                             }
                         }
 
-                    }catch (Exception e){
-                        Log.e("Servicio transporte",e.getMessage());
+                    } catch (Exception e) {
+                        Log.e("Servicio transporte", e.getMessage());
                         //Crashlytics.log(1, "ServiceGeolocation|sendLocationCoordinates", e.getMessage());
                     }
                 }
@@ -337,7 +342,7 @@ public class ServiceGeolocation extends Service {
     private void createLocationRequest() {
         mLocationRequest = new LocationRequest()
                 .setInterval(1000)
-                .setFastestInterval(1000/2)
+                .setFastestInterval(1000 / 2)
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
     }
 
@@ -375,6 +380,9 @@ public class ServiceGeolocation extends Service {
     private void getLastLocation() {
         if (isLocationPermissionGranted()) {
             fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                return;
+            }
             fusedLocationClient.getLastLocation()
                     .addOnSuccessListener(new OnSuccessListener<Location>() {
                         @Override
@@ -392,6 +400,9 @@ public class ServiceGeolocation extends Service {
     private void startLocationUpdates() {
         if (isLocationPermissionGranted()) {
             fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                return;
+            }
             fusedLocationClient.requestLocationUpdates(mLocationRequest, locationCallback, null);
         }
     }

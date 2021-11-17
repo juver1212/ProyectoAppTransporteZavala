@@ -91,9 +91,9 @@ public class ListaDocumentosFragment extends Fragment {
     }
 
     public static String getImei(Context c) {
-        TelephonyManager telephonyManager = (TelephonyManager) c
-                .getSystemService(Context.TELEPHONY_SERVICE);
-        return telephonyManager.getDeviceId();
+        String android_id = Settings.Secure.getString(c.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        return android_id;
     }
 
     private class asyniniciosession extends AsyncTask<String, Integer, String> {
